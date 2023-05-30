@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+
 html {
   font-size: 10px;
   background: url('./background.jpg') bottom center no-repeat;
@@ -9,6 +12,20 @@ body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+h1 {
+  font-size: 8rem;
+  font-family: 'Berkshire Swash', cursive;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, rgb(94, 4, 4));   
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: .2rem #fff;
+
 }
 
 .keys {
@@ -42,19 +59,39 @@ body,html {
 }
 
 .key {
-  border: .4rem solid black;
-  border-radius: .5rem;
+  border-radius: 50%;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  transition: all .07s ease;
+  transition: all .07s ease-in-out;
   width: 10rem;
   text-align: center;
-  color: rgb(230, 222, 222);
+  color: rgb(23, 2, 16);
   background: rgba(0,0,0,0.4);
   text-shadow: 0 0 .5rem black;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: glassEffect 2s infinite;
+
+
 }
 
+
+@keyframes key {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
 
 .playing {
   transform: scale(1.1);
@@ -71,5 +108,31 @@ kbd {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #85a539;
+  color: #d1e152;
+}
+
+.characters {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.characters {
+	animation-name: floating;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+
+@keyframes floating {
+	0% { transform: translate(0, 0px); }
+	50% { transform: translate(0, 15px); }
+	100% { transform: translate(0, -0px); }
 }
