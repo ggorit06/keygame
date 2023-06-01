@@ -37,6 +37,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+ 
 
   
 }
@@ -68,7 +69,7 @@ h1 {
   width: 10rem;
   text-align: center;
   color: rgb(103, 31, 79);
-  background: rgba(0,0,0,0.4);
+  background: rgba(171, 107, 107, 0.4);
   text-shadow: 0 0 .5rem black;
   width: 80px;
   height: 80px;
@@ -110,7 +111,8 @@ kbd {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #6b7140;
+  color: #b71eb7;
+  font-weight: 600;
 }
 
 .characters {
@@ -136,4 +138,15 @@ kbd {
 	50% { transform: translate(10px, 25px); }
   75% { transform: translate(20px, 35px); }
 	100% { transform: translate(10px, -10px); }
+}
+
+
+@media (max-width:768px) {
+
+  body {
+    width: 100%;
+    
+  }
+
+
 }
