@@ -12,6 +12,7 @@ body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -69,8 +70,8 @@ h1 {
   color: rgb(103, 31, 79);
   background: rgba(0,0,0,0.4);
   text-shadow: 0 0 .5rem black;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: rgba(255, 255, 255, 0.5);
   animation: glassEffect 2s infinite;
 
